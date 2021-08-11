@@ -7,6 +7,10 @@ Progress bar will have 4 spend tiers:
 * $30 off
 * $50 off
 
+## Design
+link to figma
+## Animation
+link to figma
 
 ## Getting Started with Create React App
 
