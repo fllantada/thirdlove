@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Thirdlove Engineering Challenge
+## Requirements:
+As part of the cart update, we will be adding a progress bar that will allow the customer to see how far they are from the next tier of savings.
+Progress bar will have 4 spend tiers:
+* $15 off
+* $20 off
+* $30 off
+* $50 off
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
