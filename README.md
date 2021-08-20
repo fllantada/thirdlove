@@ -1,6 +1,6 @@
 # Thirdlove Engineering Challenge
 
-##Use Case
+## Use Case
 
 We have a shopping cart that the customer can use to add products: bras and underwear that she will later purchase.
 To incentivize the user to buy more products, we will offer discounts based on the amount of USD she spends.
