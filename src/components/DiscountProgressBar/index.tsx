@@ -1,5 +1,5 @@
-import React from 'react';
-import { ILineItem, DiscountProgressConfig } from '../../types';
+import React from "react";
+import { ILineItem, DiscountProgressConfig } from "../../types";
 
 interface DiscountProcessBarProps {
   total: number;
@@ -12,7 +12,8 @@ const DiscountProcessBar: React.FunctionComponent<DiscountProcessBarProps> = ({
   lineItems,
   config,
 }) => {
-  return (<div>Future Discount Progress</div>);
+  console.log("Total:", total, "Items:", lineItems, "Config ", config);
+  return <div>Future Discount Progress</div>;
 };
 
 export default DiscountProcessBar;
