@@ -6,9 +6,7 @@ interface CartItemProps {
 }
 
 const CartItem: React.FunctionComponent<CartItemProps> = ({ lineItem }) => {
-  return (
-    <div>{"Item:  :" + lineItem.product + "Price:    " + lineItem.price}</div>
-  );
+  return <div></div>;
 };
 
 export default CartItem;

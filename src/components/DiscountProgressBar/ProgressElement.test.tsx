@@ -22,23 +22,4 @@ describe("Testing Discount Progress Bar Element", () => {
     const empty = container.getElementsByClassName("Empty")[0];
     expect(empty).toHaveStyle("width: 90%");
   });
-
-  /*  it("renders the correct number of ProgressElement components", () => {
-    render(
-      <DiscountProgressBar
-        lineItems={mock_lineItems}
-        config={moock_config}
-        total={mock_total}
-      />
-    );
-    const { container } = render(
-      <DiscountProgressBar
-        lineItems={mock_lineItems}
-        config={moock_config}
-        total={mock_total}
-      />
-    );
-
-    expect(container.getElementsByClassName("BarContainer")).toHaveLength(5);
-  }); */
 });
