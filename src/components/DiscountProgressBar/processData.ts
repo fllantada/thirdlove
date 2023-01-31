@@ -1,33 +1,34 @@
-import { DiscountProgressConfig } from "../../../types";
-
-export interface ProgressItem {
-  stage: number;
-  limit: number;
-  percent: number;
-  discount: number;
-}
+import { DiscountProgressConfig, ProgressItem } from "../../types";
 
 export const processData = (
   config: DiscountProgressConfig,
   subTotal: number
 ): ProgressItem[] => {
   let lastLimit = 0;
+  let total = subTotal;
 
-  return Object.entries(config).map(([limit, discount], index) => {
-    if (subTotal >= parseInt(limit)) {
-      lastLimit = parseInt(limit);
+  return Object.entries(config).map(([limitString, discount], index) => {
+    const limit = parseInt(limitString);
+
+    //si flag subtotal + descuento anterior
+
+    if (subTotal >= limit) {
+      //encender una flag
+      //
+
+      lastLimit = limit;
 
       return {
         stage: index,
         percent: 100,
         discount,
-        limit: parseInt(limit),
+        limit,
       };
     } else {
       //chequear si no lo supere ya con un descuento
 
       const percent = Math.round(
-        ((subTotal - lastLimit) / (parseInt(limit) - lastLimit)) * 100
+        ((subTotal - lastLimit) / (limit - lastLimit)) * 100
       );
 
       lastLimit = subTotal;
@@ -36,7 +37,7 @@ export const processData = (
         stage: index,
         percent,
         discount,
-        limit: parseInt(limit),
+        limit,
       };
     }
   });

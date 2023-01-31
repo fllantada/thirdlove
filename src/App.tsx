@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import DiscountProcessBar from "./components/DiscountProgressBar/DiscountProgressBar";
-import CartItem from "./components/CartItem.tsx";
+import CartItem from "./components/CartItem";
 import { ILineItem, DiscountProgressConfig } from "./types";
 
 const bras1: ILineItem = {
@@ -63,9 +63,9 @@ function App() {
         <button onClick={addProduct(bras2)}>Add Bras 2</button>
         <button onClick={addProduct(panties)}>Add Underwear</button>
       </div>
-      {lineItems.map((item, index) => {
+      {/*  {lineItems.map((item, index) => {
         return <CartItem key={index} lineItem={item} />;
-      })}
+      })} */}
     </div>
   );
 }

@@ -7,3 +7,10 @@ export interface ILineItem {
 export interface DiscountProgressConfig {
   [total: number]: number;
 }
+
+export interface ProgressItem {
+  stage: number;
+  limit: number;
+  percent: number;
+  discount: number;
+}

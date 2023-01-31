@@ -1,0 +1,29 @@
+.Title {
+  font-family: "Founders Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  /* or 133% */
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #25261e;
+}
+
+.Subtitle {
+  font-family: "Founders Grotesk Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  /* or 117% */
+
+  text-align: center;
+
+  /* Text: Primary */
+
+  color: #2c272d;
+}

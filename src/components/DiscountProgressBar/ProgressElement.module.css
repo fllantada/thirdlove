@@ -1,23 +1,48 @@
 .Container {
-  margin: 1px;
-  width: 82.13px;
-  height: 6px;
   display: flex;
-  position: relative;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: -50% -0%;
-  border-bottom-left-radius: -50% -0%;
+  flex-direction: column;
 
-  overflow: hidden;
-  border: 2px white;
+  align-items: flex-end;
 }
 
+.BarContainer {
+  width: 82.13px;
+  margin: 0px 1.5px;
+  height: 6px;
+  display: flex;
+}
+
+.Label {
+  font-family: "Founders Grotesk Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 14px;
+  /* identical to box height, or 127% */
+
+  text-align: center;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+
+  /* Text: Primary */
+
+  color: #2c272d;
+}
 .Filled {
+  border: none;
+  border-right: solid 0px #f44040;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
   background-color: #f44040;
   height: 100%;
 }
 .Empty {
+  border: none;
+  border-right: solid 0px #ecdacb;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+
   background-color: #ecdacb;
+
   height: 100%;
 }

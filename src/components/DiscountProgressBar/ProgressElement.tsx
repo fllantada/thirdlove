@@ -7,16 +7,23 @@ interface Props {
 }
 
 const ProgressElement: React.FC<Props> = ({ percent, label }) => {
-  console.log("percent: ", percent, "label: ", label);
   return (
     <div className={styles.Container}>
+      <div className={styles.BarContainer}>
+        <div
+          className={styles.Filled}
+          style={{
+            width: `${percent}%`,
+          }}
+        />
+        <div className={styles.Empty} style={{ width: `${100 - percent}%` }} />
+      </div>
       <div
-        className={styles.Filled}
-        style={{
-          width: `${percent}%`,
-        }}
-      />
-      <div className={styles.Empty} style={{ width: `${100 - percent}%` }} />
+        className={styles.Label}
+        style={{ fontWeight: percent == 100 ? "700" : "400" }}
+      >
+        ${label} OFF
+      </div>
     </div>
   );
 };
