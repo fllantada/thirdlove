@@ -1,13 +1,14 @@
 import React from "react";
-import { ILineItem, DiscountProgressConfig } from "../../types";
+import { ILineItem } from "../../types";
 
 interface CartItemProps {
   lineItem: ILineItem;
 }
 
 const CartItem: React.FunctionComponent<CartItemProps> = ({ lineItem }) => {
-  console.log(lineItem);
-  return <div>cartItem</div>;
+  return (
+    <div>{"Item:  :" + lineItem.product + "Price:    " + lineItem.price}</div>
+  );
 };
 
 export default CartItem;

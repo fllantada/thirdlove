@@ -58,14 +58,14 @@ function App() {
         <span>Total:</span>
         <span>{total}</span>
       </div>
-      {lineItems.map((item, index) => {
-        return <CartItem key={index} lineItem={item} />;
-      })}
       <div className='App-button-section'>
         <button onClick={addProduct(bras1)}>Add Bras 1</button>
         <button onClick={addProduct(bras2)}>Add Bras 2</button>
         <button onClick={addProduct(panties)}>Add Underwear</button>
       </div>
+      {lineItems.map((item, index) => {
+        return <CartItem key={index} lineItem={item} />;
+      })}
     </div>
   );
 }
