@@ -5,17 +5,15 @@ import ProgressElement from "./ProgressElement";
 import styles from "./DiscountProgressBar.module.css";
 import ProgressTitle from "./ProgressTitle";
 
-interface DiscountProcessBarProps {
+interface DiscountProgressBarProps {
   total: number;
   lineItems: ILineItem[];
   config: DiscountProgressConfig;
 }
 
-const DiscountProcessBar: React.FunctionComponent<DiscountProcessBarProps> = ({
-  total,
-  lineItems,
-  config,
-}) => {
+const DiscountProgressBar: React.FunctionComponent<
+  DiscountProgressBarProps
+> = ({ total, lineItems, config }) => {
   //Options, A) change props from total to subTotal and remove this line and avoid O(N) unnecessary loop and DRY issue
   //alternative,B) processData function will not be so verbose and simple. I choose this option
   const subTotal = lineItems.reduce((reducer, item) => reducer + item.price, 0);
@@ -48,4 +46,4 @@ const DiscountProcessBar: React.FunctionComponent<DiscountProcessBarProps> = ({
   );
 };
 
-export default DiscountProcessBar;
+export default DiscountProgressBar;
