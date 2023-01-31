@@ -20,7 +20,7 @@ const ProgressElement: React.FC<Props> = ({ percent, label }) => {
       </div>
       <div
         className={styles.Label}
-        style={{ fontWeight: percent == 100 ? "700" : "400" }}
+        style={{ fontWeight: percent === 100 ? "700" : "400" }}
       >
         ${label} OFF
       </div>

@@ -5,7 +5,6 @@ export const processData = (
   subTotal: number
 ): ProgressItem[] => {
   let lastLimit = 0;
-  let total = subTotal;
 
   return Object.entries(config).map(([limitString, discount], index) => {
     const limit = parseInt(limitString);

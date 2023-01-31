@@ -16,10 +16,13 @@ const Card: React.FunctionComponent<CartItemProps> = ({ lineItem }) => {
           <div className={styles.DelateButton}>X</div>
         </div>
 
-        <div className={styles.Price}>${lineItem.price}</div>
+        <div className={styles.Price}>Tipo de producto</div>
+        <div className={styles.Price}>alguna descripcion</div>
+
         <div className={styles.ButtonContainer}>
           <button className={styles.CustomButton}>+</button>5
           <button className={styles.CustomButton}>-</button>
+          <div className={styles.Price}>${lineItem.price}</div>
         </div>
       </div>
     </div>
