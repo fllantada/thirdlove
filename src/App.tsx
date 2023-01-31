@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import DiscountProcessBar from "./components/DiscountProgressBar";
+import DiscountProcessBar from "./components/DiscountProgressBar/DiscountProgressBar";
 import CartItem from "./components/CartItem.tsx";
 import { ILineItem, DiscountProgressConfig } from "./types";
 

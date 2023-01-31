@@ -2,7 +2,7 @@ import React from "react";
 import { ILineItem, DiscountProgressConfig } from "../../types";
 import { processData, ProgressItem } from "./helpers/processData";
 import ProgressElement from "./ProgressElement";
-import ProgressContainer from "./ProgressContainer";
+import styles from "./DiscountProgressBar.module.css";
 
 interface DiscountProcessBarProps {
   total: number;
@@ -20,7 +20,7 @@ const DiscountProcessBar: React.FunctionComponent<DiscountProcessBarProps> = ({
   const ProgressBarItems: ProgressItem[] = processData(config, subTotal);
 
   return (
-    <ProgressContainer>
+    <div className={styles.Container}>
       {ProgressBarItems.map((item, index) => {
         return (
           <ProgressElement
@@ -30,7 +30,7 @@ const DiscountProcessBar: React.FunctionComponent<DiscountProcessBarProps> = ({
           />
         );
       })}
-    </ProgressContainer>
+    </div>
   );
 };
 

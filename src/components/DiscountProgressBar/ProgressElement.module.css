@@ -1,4 +1,4 @@
-.progress-element-container {
+.Container {
   margin: 1px;
   width: 82.13px;
   height: 6px;
@@ -13,11 +13,11 @@
   border: 2px white;
 }
 
-.progress-element-fill {
+.Filled {
   background-color: #f44040;
   height: 100%;
 }
-.progress-element-empty {
+.Empty {
   background-color: #ecdacb;
   height: 100%;
 }
