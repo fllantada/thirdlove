@@ -18,7 +18,7 @@ const DiscountProcessBar: React.FunctionComponent<DiscountProcessBarProps> = ({
   const subTotal = lineItems.reduce((reducer, item) => reducer + item.price, 0);
 
   const ProgressBarItems: ProgressItem[] = processData(config, subTotal);
-  console.log("ProgressBarItems: ", ProgressBarItems);
+
   return (
     <ProgressContainer>
       {ProgressBarItems.map((item, index) => {

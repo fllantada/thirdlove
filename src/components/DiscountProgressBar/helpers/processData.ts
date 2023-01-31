@@ -15,7 +15,6 @@ export const processData = (
 
   return Object.entries(config).map(([limit, discount], index) => {
     if (subTotal >= parseInt(limit)) {
-      console.log("ENTRE A BARRA LLENA");
       lastLimit = parseInt(limit);
 
       return {

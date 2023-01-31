@@ -1,0 +1,23 @@
+.progress-element-container {
+  margin: 1px;
+  width: 82.13px;
+  height: 6px;
+  display: flex;
+  position: relative;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: -50% -0%;
+  border-bottom-left-radius: -50% -0%;
+
+  overflow: hidden;
+  border: 2px white;
+}
+
+.progress-element-fill {
+  background-color: #f44040;
+  height: 100%;
+}
+.progress-element-empty {
+  background-color: #ecdacb;
+  height: 100%;
+}

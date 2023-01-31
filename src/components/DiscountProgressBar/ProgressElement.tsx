@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/ProgressElement.css";
 
 interface Props {
   percent: number;
@@ -8,18 +9,16 @@ interface Props {
 const ProgressElement: React.FC<Props> = ({ percent, label }) => {
   console.log("percent: ", percent, "label: ", label);
   return (
-    <div className='progress-bar-container'>
+    <div className='progress-element-container'>
       <div
-        className='progress-bar-fill'
+        className='progress-element-fill'
         style={{
           width: `${percent}%`,
-          backgroundColor: "green",
-          height: "100%",
         }}
       />
       <div
-        className='progress-bar-empty'
-        style={{ width: `${100 - percent}%`, backgroundColor: "red" }}
+        className='progress-element-empty'
+        style={{ width: `${100 - percent}%` }}
       />
     </div>
   );
