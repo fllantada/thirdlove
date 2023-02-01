@@ -5,7 +5,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border: 1px rgb(196, 191, 191);
   margin: 5px 16px;
 }
 
@@ -46,6 +46,7 @@ button.DelateButton {
 .ButtonSpace {
   padding-right: 30%;
   padding-left: 10%;
+  padding-bottom: 10px;
   width: 80%;
 }
 .PriceSpace {
