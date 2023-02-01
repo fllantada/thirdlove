@@ -13,7 +13,6 @@ const CardInfo: React.FC<Props> = ({
     <div className={styles.ContentContainer}>
       <div className={styles.TitleContainer}>
         <div className={styles.Title}> {title}</div>
-        <button className={styles.DelateButton}>X</button>
       </div>
 
       <div className={styles.Subtitle}>Tipo de producto</div>

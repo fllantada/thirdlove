@@ -3,6 +3,7 @@ import { ILineItem } from "../../types";
 import CardImage from "./CarImage";
 import CardInfo from "./CardInfo";
 import styles from "./Card.module.css";
+import CardButton from "./CardButton";
 
 interface CartItemProps {
   lineItem: ILineItem;
@@ -26,12 +27,7 @@ const Card: React.FunctionComponent<CartItemProps> = ({
 
       <div className={styles.ContentContainer}>
         <CardInfo title={lineItem.product} type={lineItem.productType} />
-
-        <div className={styles.ButtonContainer}>
-          <button className={styles.CustomButton}>+</button>1
-          <button className={styles.CustomButton}>-</button>
-          <div className={styles.Price}>${lineItem.price}</div>
-        </div>
+        <CardButton />
       </div>
     </div>
   );
