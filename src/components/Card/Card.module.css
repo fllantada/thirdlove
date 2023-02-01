@@ -12,7 +12,7 @@
 .ContentContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 70%;
   height: 100%;
@@ -51,4 +51,20 @@ button.DelateButton {
 .PriceSpace {
   padding-right: 15px;
   width: 20%;
+  font-family: "Founders Grotesk Text";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+
+  text-align: right;
+
+  /* Text: Primary */
+
+  color: #2c272d;
+}
+
+.TitleSpace {
+  width: 80%;
 }

@@ -26,13 +26,28 @@ const Card: React.FunctionComponent<CartItemProps> = ({
       <CardImage />
 
       <div className={styles.ContentContainer}>
-        <CardInfo title={lineItem.product} type={lineItem.productType} />
         <div
           style={{
             display: "flex",
             flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
             width: "100%",
             margin: "10px 0px",
+          }}
+        >
+          <div className={styles.TitleSpace}>
+            <CardInfo title={lineItem.product} type={lineItem.productType} />
+          </div>
+          x
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+
+            width: "100%",
+            margin: "0px 0px",
           }}
         >
           <div className={styles.ButtonSpace}>
