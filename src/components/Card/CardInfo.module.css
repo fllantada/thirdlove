@@ -1,22 +1,38 @@
 .ContentContainer {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 10px 0px 0px 10px;
 }
-.TitleContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: space-between;
-  justify-content: space-between;
-  font-size: 20px;
-  font-weight: 600;
-  border: 0.1px solid black;
-}
+
 .Title {
-  width: 100%;
-  border: 0.1px solid black;
+  font-family: "Founders Grotesk Text";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #2c272d;
 }
+.Model {
+  font-family: "Founders Grotesk Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height, or 117% */
+
+  /* Text: Secondary */
+
+  color: #666666;
+}
+/* NAME */
+
+/* mobile/body/body 1 - medium */
+
+/* or 129% */
+
+/* Text: Primary */

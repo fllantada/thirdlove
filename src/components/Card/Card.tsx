@@ -27,7 +27,19 @@ const Card: React.FunctionComponent<CartItemProps> = ({
 
       <div className={styles.ContentContainer}>
         <CardInfo title={lineItem.product} type={lineItem.productType} />
-        <CardButton />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            width: "100%",
+            margin: "10px 0px",
+          }}
+        >
+          <div className={styles.ButtonSpace}>
+            <CardButton />
+          </div>
+          <div className={styles.PriceSpace}>$550</div>
+        </div>
       </div>
     </div>
   );
