@@ -1,23 +1,31 @@
 import React from "react";
 import { ILineItem } from "../../types";
+import CardImage from "./CarImage";
+import CardInfo from "./CardInfo";
 import styles from "./Card.module.css";
 
 interface CartItemProps {
   lineItem: ILineItem;
+  image?: string;
+  subtitle?: string;
+  add?: () => void;
+  remove?: () => void;
+  delete?: () => void;
 }
 
-const Card: React.FunctionComponent<CartItemProps> = ({ lineItem }) => {
+const Card: React.FunctionComponent<CartItemProps> = ({
+  lineItem,
+  image = "https://picsum.photos/200/300",
+  subtitle = "default subtitle",
+  add,
+  remove,
+}) => {
   return (
     <div className={styles.Container}>
-      <div className={styles.ImageContainer}>Image</div>
-      <div className={styles.ContentContainer}>
-        <div className={styles.TitleContainer}>
-          <div className={styles.Title}> {lineItem.product}</div>
-          <button className={styles.DelateButton}>X</button>
-        </div>
+      <CardImage />
 
-        <div className={styles.Subtitle}>Tipo de producto</div>
-        <div className={styles.Description}>alguna descripcion</div>
+      <div className={styles.ContentContainer}>
+        <CardInfo title={lineItem.product} type={lineItem.productType} />
 
         <div className={styles.ButtonContainer}>
           <button className={styles.CustomButton}>+</button>1

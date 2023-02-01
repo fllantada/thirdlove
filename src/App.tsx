@@ -23,9 +23,21 @@ const panties: ILineItem = {
   price: 12,
 };
 
+interface Product extends ILineItem {
+  id: number;
+  image: string;
+}
+
+interface CartItem extends Product {
+  quantity: number;
+}
+
+type Cart = CartItem[];
+
 function App() {
   const initialValue: ILineItem[] = [];
   const [lineItems, setLineItems] = useState(initialValue);
+  const [cart, setCart] = useState([] as Cart);
 
   const subtotal = lineItems.reduce((reducer, item) => reducer + item.price, 0);
   // This is the current configuration but could change at any point.
@@ -43,10 +55,14 @@ function App() {
       return subtotal >= parseInt(limit);
     });
   const total = subtotal - (discountApply ? discountApply[1] : 0);
-  const addProduct = (item: ILineItem) => () =>
+
+  const addProduct = (item: ILineItem) => () => {
     setLineItems((prev) => {
       return [...prev, item];
     });
+
+    //add to cart
+  };
   return (
     <div className='App'>
       <span>Test my component</span>
@@ -64,6 +80,7 @@ function App() {
         <button onClick={addProduct(bras2)}>Add Bras 2</button>
         <button onClick={addProduct(panties)}>Add Underwear</button>
       </div>
+
       <div className='App-button-section'>
         {lineItems.map((item, index) => {
           return <Card key={index} lineItem={item} />;
