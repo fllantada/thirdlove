@@ -35,6 +35,16 @@
   align-items: center;
 }
 
+.App-card-section {
+  display: flex;
+  max-height: fit-content;
+  justify-content: center;
+  flex-direction: column;
+
+  overflow-y: scroll;
+  align-items: center;
+}
+
 button {
   width: 300px;
   padding: 5px 30px;

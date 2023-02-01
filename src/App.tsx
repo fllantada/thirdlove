@@ -23,21 +23,9 @@ const panties: ILineItem = {
   price: 12,
 };
 
-interface Product extends ILineItem {
-  id: number;
-  image: string;
-}
-
-interface CartItem extends Product {
-  quantity: number;
-}
-
-type Cart = CartItem[];
-
 function App() {
   const initialValue: ILineItem[] = [];
   const [lineItems, setLineItems] = useState(initialValue);
-  const [cart, setCart] = useState([] as Cart);
 
   const subtotal = lineItems.reduce((reducer, item) => reducer + item.price, 0);
   // This is the current configuration but could change at any point.
@@ -75,16 +63,15 @@ function App() {
         <span>Total:</span>
         <span>{total}</span>
       </div>
-      <div className='App-button-section'>
-        <button onClick={addProduct(bras1)}>Add Bras 1</button>
-        <button onClick={addProduct(bras2)}>Add Bras 2</button>
-        <button onClick={addProduct(panties)}>Add Underwear</button>
-      </div>
-
-      <div className='App-button-section'>
+      <div className='App-card-section'>
         {lineItems.map((item, index) => {
           return <Card key={index} lineItem={item} />;
         })}
+      </div>
+      <div className='App-button-section' style={{ maxHeight: "900px" }}>
+        <button onClick={addProduct(bras1)}>Add Bras 1</button>
+        <button onClick={addProduct(bras2)}>Add Bras 2</button>
+        <button onClick={addProduct(panties)}>Add Underwear</button>
       </div>
     </div>
   );

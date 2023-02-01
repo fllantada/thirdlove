@@ -53,7 +53,7 @@ const Card: React.FunctionComponent<CartItemProps> = ({
           <div className={styles.ButtonSpace}>
             <CardButton />
           </div>
-          <div className={styles.PriceSpace}>$550</div>
+          <div className={styles.PriceSpace}>${lineItem.price}</div>
         </div>
       </div>
     </div>
